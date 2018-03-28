@@ -1,16 +1,16 @@
 [user]
-	name = Florian Spieß
-	email = business@minnced.club
+    name = Florian Spieß
+    email = business@minnced.club
 [alias]
-	ls = log --oneline
+    ls = log --oneline
     mt = mergetool
     dt = difftool
 [gpg]
-	program = gpg2
+    program = gpg2
 [commit]
-	gpgSign = true
+    gpgSign = true
 [core]
-	editor = vim
+    editor = vim
     pager = less -R
 [merge]
     tool = vimdiff
