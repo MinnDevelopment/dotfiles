@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.kt set filetype=kt
+au BufRead,BufNewFile *.kt,*kts set filetype=kt
