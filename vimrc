@@ -1,20 +1,37 @@
+" vim: set foldmethod=marker :{{{
+" vim: set foldlevel=0
+" }}}
+
+" Options {{{
+set nocompatible
 set nu
 set expandtab
 set shiftwidth=4
 set tabstop=4
 set ai
 set clipboard=unnamedplus
-syntax on
+set encoding=utf-8
+set listchars=eol:¬
+set list
+set foldmethod=syntax
 
+filetype plugin indent on
+syntax on
+" }}}
+
+" Functions {{{
 function! ClangFormat()
     :w
     exe "!clang-format -i %"
     :e
 endfunction
+" }}}
 
+" Keybinds {{{
 " quick save
 imap <C-S> <Esc>:w<CR>i
 nmap <C-S> :w<CR>
+
 " close on X
 " imap <C-X> <Esc>:x<CR>
 nmap <C-X> :x<CR>
@@ -32,6 +49,9 @@ imap ( ()<Esc>i
 imap [ []<Esc>i
 imap < <><Esc>i
 
+" }}}
+
+" Colors {{{
 " highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 au ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
@@ -39,3 +59,4 @@ au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhitespace /\s\+$/
 au BufWinEnter * match ExtraWhitespace /\s\+$/
 au BufWinLeave * call clearmatches()
+" }}}
