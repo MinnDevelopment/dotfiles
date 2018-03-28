@@ -39,12 +39,14 @@ syn match ktNum '-\d*\.\d\+' display
 syn match ktNum '\d*\.\d\+[dD]' display
 syn match ktNum '-\d*\.\d\+[dD]' display
 
+" comment
+syn match ktComment '//.*$' contains=basicCommentKeywords
 
 " Regions
 syn region ktString start='"' end='"' display
 syn region ktChar start="'" end="'" display
 syn region ktBlock start="{" end="}" fold transparent
-syn region ktBComment start="/\*\*" end="\*/" fold transparent
+syn region ktBComment start="/\*" end="\*/" fold contains=basicCommentKeywords
 
 
 let b:current_syntax = "kt"
@@ -52,7 +54,9 @@ let b:current_syntax = "kt"
 hi def link basicLanguageKeywords Statement
 hi def link basicCommentKeywords Todo
 hi def link basicTypeKeywords Type
-hi def link ktString PreProc
-hi def link ktChar PreProc
+hi def link ktString Special
+hi def link ktChar Special
 hi def link ktNum Constant
 hi def link ktBlock Statement
+hi def link ktComment PreProc
+hi def link ktBComment PreProc
