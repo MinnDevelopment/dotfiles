@@ -4,10 +4,11 @@ endif
 
 " Keywords
 syn keyword basicLanguageKeywords private public internal
-syn keyword basicLanguageKeywords class interface data enum package import
+syn keyword basicLanguageKeywords class interface data enum package import abstract
 syn keyword basicLanguageKeywords val var const final
 syn keyword basicLanguageKeywords for while when with try catch if else return
-syn keyword basicLanguageKeywords fun async await launch runBlocking produce throw
+syn keyword basicLanguageKeywords in is as until
+syn keyword basicLanguageKeywords fun async await launch runBlocking produce throw override inline infix suspend
 syn keyword basicLanguageKeywords run let use apply
 syn keyword basicTypeKeywords String Char Int Long Double Float Regex Unit Nothing Any
 syn keyword basicTypeKeywords List Array Set Sequence Map Iterator

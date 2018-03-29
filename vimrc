@@ -41,13 +41,13 @@ au FileType cc,cpp,c,h,hpp,hh nmap <silent> <C-K> :call<Space>ClangFormat()<CR>
 au FileType cc,cpp,c,h,hpp,hh inoremap <silent> <C-K> <Esc>:call<Space>ClangFormat()<CR>i
 
 " this would auto-generate an int main block when entering 'int main('
-" au FileType c inoremap int<Space>main( int<Space>main(void)<Space>{<CR><Tab><CR>return<Space>0;<CR>}<Esc>4Xkk<End>i<Space>
+" au FileType c inoremap int<Space>main( int<Space>main(void)<Space>{<CR><Tab><CR>return<Space>0;<CR>}<Esc>4XkkA
 
 " auto complete blocks
 imap { {}<Esc>i
 imap ( ()<Esc>i
 imap [ []<Esc>i
-imap < <><Esc>i
+" imap < <><Esc>i
 
 " }}}
 
