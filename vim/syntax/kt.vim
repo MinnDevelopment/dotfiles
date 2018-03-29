@@ -4,12 +4,14 @@ endif
 
 " Keywords
 syn keyword basicLanguageKeywords private public internal
-syn keyword basicLanguageKeywords class interface data enum package
+syn keyword basicLanguageKeywords class interface data enum package import
 syn keyword basicLanguageKeywords val var const final
 syn keyword basicLanguageKeywords for while when with try catch if else return
 syn keyword basicLanguageKeywords fun async await launch runBlocking produce throw
 syn keyword basicLanguageKeywords run let use apply
-syn keyword basicTypeKeywords String Char Int Long Double Float Regex Unit Nothing
+syn keyword basicTypeKeywords String Char Int Long Double Float Regex Unit Nothing Any
+syn keyword basicTypeKeywords List Array Set Sequence Map Iterator
+syn keyword basicTypeKeywords MutableList MutableSet MutableMap MutableIterator
 syn keyword basicCommentKeywords TODO FIXME NOTE contained
 
 
@@ -42,6 +44,9 @@ syn match ktNum '-\d*\.\d\+[dD]' display
 " comment
 syn match ktComment '//.*$' contains=basicCommentKeywords
 
+" annotation
+syn match ktAnnotation '@\w\+' display
+
 " Regions
 syn region ktString start='"' end='"' display
 syn region ktChar start="'" end="'" display
@@ -60,3 +65,4 @@ hi def link ktNum Constant
 hi def link ktBlock Statement
 hi def link ktComment PreProc
 hi def link ktBComment PreProc
+hi def link ktAnnotation Type
