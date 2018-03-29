@@ -14,6 +14,8 @@ set encoding=utf-8
 set listchars=eol:¬
 set list
 set foldmethod=syntax
+set wildmenu
+" colorscheme railscasts
 
 filetype plugin indent on
 syntax on
