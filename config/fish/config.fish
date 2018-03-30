@@ -12,6 +12,10 @@ function fish_prompt
     printf '%s@%s %s%s%s%s%s> ' (whoami) (hostname) (echo $x) (set_color $fish_color_cwd) (prompt_pwd) (set_color normal) (__fish_git_prompt)
 end
 
+function daemon
+    screen -dmS (head /proc/uptime) $argv
+end
+
 function ll
     ls -lhaF $argv
 end
