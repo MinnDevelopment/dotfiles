@@ -22,7 +22,7 @@ syn keyword basicCommentKeywords TODO FIXME NOTE contained
 syn match ktNum '-\?\d\+[lL]\?' display " decimal / octal
 syn match ktNum '-\?0b[01_]\+[lL]\?' display "binary
 syn match ktNum '-\?0x[0-9a-fA-F_]\+[lL]\?' display " hexadecimal
-syn match ktNum '-\?\d*\.\d\+[lL]\?' display " float
+syn match ktNum '-\?\d*\.\d\+[dD]\?' display " float
 
 syn match ktComment '//.*$' contains=basicCommentKeywords " comment
 syn match ktAnnotation '@\w\+' display " annotations
