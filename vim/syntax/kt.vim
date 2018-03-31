@@ -19,35 +19,13 @@ syn keyword basicCommentKeywords TODO FIXME NOTE contained
 
 " Matches
 
-" decimal / octal
-syn match ktNum '\d\+' display
-syn match ktNum '-\d\+' display
-syn match ktNum '\d\+[lL]' display
-syn match ktNum '-\d\+[lL]' display
+syn match ktNum '-\?\d\+[lL]\?' display " decimal / octal
+syn match ktNum '-\?0b[01_]\+[lL]\?' display "binary
+syn match ktNum '-\?0x[0-9a-fA-F_]\+[lL]\?' display " hexadecimal
+syn match ktNum '-\?\d*\.\d\+[lL]\?' display " float
 
-" binary
-syn match ktNum '0b[01_]\+' display
-syn match ktNum '-0b[01_]\+' display
-syn match ktNum '0b[01_]\+[lL]' display
-syn match ktNum '-0b[01_]\+[lL]' display
-
-" hexadecimal
-syn match ktNum '0x[0-9a-fA-F_]\+' display
-syn match ktNum '-0x[0-9a-fA-F_]\+' display
-syn match ktNum '0x[0-9a-fA-F_]\+[lL]' display
-syn match ktNum '-0x[0-9a-fA-F_]\+[lL]' display
-
-" float
-syn match ktNum '\d*\.\d\+' display
-syn match ktNum '-\d*\.\d\+' display
-syn match ktNum '\d*\.\d\+[dD]' display
-syn match ktNum '-\d*\.\d\+[dD]' display
-
-" comment
-syn match ktComment '//.*$' contains=basicCommentKeywords
-
-" annotation
-syn match ktAnnotation '@\w\+' display
+syn match ktComment '//.*$' contains=basicCommentKeywords " comment
+syn match ktAnnotation '@\w\+' display " annotations
 
 " Regions
 syn region ktString start='"' end='"' display
