@@ -11,11 +11,15 @@ set tabstop=4
 set ai
 set clipboard=unnamedplus
 set encoding=utf-8
-set listchars=eol:¬
+
 set list
+set listchars=eol:¬
+set listchars+=tab:\|›
+set listchars+=extends:›
+set listchars+=precedes:‹
+
 set foldmethod=syntax
 set wildmenu
-" colorscheme railscasts
 
 filetype plugin indent on
 syntax on
