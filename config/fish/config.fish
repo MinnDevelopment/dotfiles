@@ -4,6 +4,9 @@ set __fish_git_prompt_showstashstate 'yes'
 set __fish_git_prompt_showupstream 'yes'
 set __fish_git_prompt_color_branch yellow
 
+set -x EDITOR vim
+set -x SHELL /usr/bin/fish
+
 function fish_prompt
     set x "$status "
     if test $status -eq 0

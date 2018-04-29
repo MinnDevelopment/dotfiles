@@ -11,6 +11,7 @@ set tabstop=4
 set ai
 set clipboard=unnamedplus
 set encoding=utf-8
+set colorcolumn=75
 
 set list
 set listchars=eol:¬
@@ -65,4 +66,7 @@ au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhitespace /\s\+$/
 au BufWinEnter * match ExtraWhitespace /\s\+$/
 au BufWinLeave * call clearmatches()
+
+" vertical line
+highlight ColorColumn ctermbg=lightgrey
 " }}}
