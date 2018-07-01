@@ -102,5 +102,4 @@ HISTSIZE=1000
 alias ls="ls -A --color=auto"
 alias ll="ls -laFh"
 
-bindkey "^[[1~" beginning-of-line
-bindkey "^[[4~" end-of-line
+source ~/.bindkeyrc
