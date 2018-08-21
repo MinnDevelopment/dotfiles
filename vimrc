@@ -22,6 +22,9 @@ set listchars+=precedes:‹
 set foldmethod=syntax
 set wildmenu
 
+set laststatus=2
+set statusline=%!MyStatusLine()
+
 filetype plugin indent on
 syntax on
 " }}}
@@ -31,6 +34,10 @@ function! ClangFormat()
     :w
     exe "!clang-format -i %"
     :e
+endfunction
+
+function! MyStatusLine()
+    return "%F%m %y [%l:%c]"
 endfunction
 " }}}
 
