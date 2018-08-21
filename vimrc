@@ -2,6 +2,8 @@
 " vim: set foldlevel=0
 " }}}
 
+execute pathogen#infect()
+
 " Options {{{
 set nocompatible
 set nu
@@ -24,6 +26,8 @@ set wildmenu
 
 set laststatus=2
 set statusline=%!MyStatusLine()
+
+autocmd VimEnter * NERDTree
 
 filetype plugin indent on
 syntax on
