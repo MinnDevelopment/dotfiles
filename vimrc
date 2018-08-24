@@ -47,12 +47,12 @@ endfunction
 
 " Keybinds {{{
 " quick save
-imap <C-S> <Esc>:w<CR>i
-nmap <C-S> :w<CR>
+imap <C-S> <Esc>:wa<CR>i
+nmap <C-S> :wa<CR>
 
 " close on X
 " imap <C-X> <Esc>:x<CR>
-nmap <C-X> :x<CR>
+nmap <C-X> :xa<CR>
 
 " auto format code
 au FileType cc,cpp,c,h,hpp,hh nmap <silent> <C-K> :call<Space>ClangFormat()<CR>
