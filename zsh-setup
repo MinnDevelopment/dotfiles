@@ -1,0 +1,27 @@
+#!/usr/bin/zsh
+
+set -xe
+
+zsh=~/.oh-my-zsh/custom
+plugins=$zsh/plugins
+
+if [ ! -d $plugins/zsh-autosuggestions ]; then
+    git clone -q https://github.com/zsh-users/zsh-autosuggestions $plugins/zsh-autosuggestions
+fi
+
+if [ ! -d $plugins/zsh-syntax-highlighting ]; then
+    git clone -q https://github.com/zsh-users/zsh-syntax-highlighter $plugins/zsh-syntax-highlighting
+fi
+
+if [ ! -d $plugins/zsh-url-highlighter ]; then
+    git clone -q https://github.com/ascii-soup/zsh-url-highlighter $plugins/zsh-url-highlighter
+fi
+
+if [ ! -d $plugins/gradle-completion ]; then
+    git clone -q https://github.com/gradle/gradle-completion $plugins/gradle-completion
+fi
+
+set +xe
+source ~/.zshrc
+
+
