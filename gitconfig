@@ -2,11 +2,9 @@
     name = Florian Spieß
     email = business@minnced.club
 [alias]
-    ls = log --oneline
+    ls = log --pretty='tformat:"%Cred%h %Cgreen%s %Cblue-- %Creset%an %C(auto)<%ae>%d%Creset"'
     mt = mergetool
     dt = difftool
-[gpg]
-    program = gpg2
 [commit]
     gpgSign = true
 [core]
