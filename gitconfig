@@ -3,6 +3,7 @@
     email = business@minnced.club
 [alias]
     ls = log --pretty='tformat:"%Cred%h %Cgreen%s %Cblue-- %Creset%an %C(auto)<%ae>%d%Creset"'
+    ll = log --pretty='tformat:"%Cred%h %Cgreen%s %Cblue %C(auto)%d%Creset%nAuthor: %an <%ae>%nDate: %cD%n%n%w(70,4,4)%-b"'
     mt = mergetool
     dt = difftool
 [commit]
