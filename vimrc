@@ -22,6 +22,7 @@ set listchars+=precedes:‹
 
 set foldmethod=syntax
 set wildmenu
+set mouse=a
 
 set laststatus=2
 set statusline=%!MyStatusLine()
