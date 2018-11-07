@@ -13,7 +13,6 @@ set tabstop=4
 set ai
 set clipboard=unnamedplus
 set encoding=utf-8
-set colorcolumn=75
 
 set list
 set listchars=eol:¬
