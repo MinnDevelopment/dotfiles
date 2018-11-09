@@ -2,6 +2,8 @@
 
 set -xe
 
+touch $HOME/.bindkeyrc $HOME/.env
+
 zsh=~/.oh-my-zsh/custom
 plugins=$zsh/plugins
 
