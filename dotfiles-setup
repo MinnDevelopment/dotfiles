@@ -1,0 +1,8 @@
+#!/bin/sh
+
+ln -s ~/.zshrc zshrc
+ln -s ~/.vimrc vimrc
+ln -s ~/.imwheelrc imwheelrc
+git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
+./vim-setup
+./zsh-setup
