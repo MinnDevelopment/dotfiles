@@ -23,7 +23,9 @@ if [ ! -d $plugins/gradle-completion ]; then
     git clone -q https://github.com/gradle/gradle-completion $plugins/gradle-completion
 fi
 
-wget -O $zsh/themes/bullet-train.zsh-theme https://raw.github.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
+if [ ! -f $zsh/themes/bullet-train.zsh-theme ]; then
+    wget -O $zsh/themes/bullet-train.zsh-theme https://raw.github.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
+fi
 
 set +xe
 source ~/.zshrc

@@ -3,11 +3,29 @@
 set -xe
 
 wd=`pwd`
-ln -s $wd/zshrc ~/.zshrc
-ln -s $wd/vimrc ~/.vimrc
-ln -s $wd/imwheelrc ~/.imwheelrc
-ln -s $wd/gitignore_global ~/.gitignore_global
-git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
+if [ ! -f ~/.zshrc ]; then
+    ln -s $wd/zshrc ~/.zshrc
+fi
+if [ ! -f ~/.vimrc ]; then
+    ln -s $wd/vimrc ~/.vimrc
+fi
+if [ ! -f ~/.imwheelrc ]; then
+    ln -s $wd/imwheelrc ~/.imwheelrc
+fi
+if [ ! -f ~/.gitignore_global ]; then
+    ln -s $wd/gitignore_global ~/.gitignore_global
+fi
+if [ ! -f ~/.vim/syntax/kt.vim ]; then
+    mkdir -p ~/.vim/syntax
+    ln -s $wd/vim/syntax/kt.vim ~/.vim/syntax/kt.vim
+fi
+if [ ! -f ~/.vim/ftdetect/kt.vim ]; then
+    mkdir -p ~/.vim/ftdetect
+    ln -s $wd/vim/ftdetect/kt.vim ~/.vim/ftdetect/kt.vim
+fi
+if [ ! -d ~/.oh-my-zsh ]; then
+    git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
+fi
 
 set +x
 
