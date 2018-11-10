@@ -1,8 +1,15 @@
 #!/bin/sh
 
-ln -s ~/.zshrc zshrc
-ln -s ~/.vimrc vimrc
-ln -s ~/.imwheelrc imwheelrc
+set -xe
+
+wd=`pwd`
+ln -s $wd/zshrc ~/.zshrc
+ln -s $wd/vimrc ~/.vimrc
+ln -s $wd/imwheelrc ~/.imwheelrc
+ln -s $wd/gitignore_global ~/.gitignore_global
 git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
+
+set +x
+
 ./vim-setup
 ./zsh-setup

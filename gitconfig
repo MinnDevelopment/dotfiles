@@ -11,7 +11,12 @@
 [core]
     editor = vim
     pager = less -R
+    autcrlf = input
+    whitespace = trailing-space,space-before-tab
+    excludefile = ~/.gitignore_global
 [merge]
     tool = vimdiff
 [diff]
     tool = vimdiff
+[help]
+    autocorrect = 2
