@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if [ ! -f ~/.tmux.conf ]; then
+    ln -s `pwd`/tmux.conf ~/.tmux.conf
+fi
+
+if [ ! -d ~/tmux/.tmux-themepack ]; then
+    mkdir tmux
+    git clone https://github.com/jimeh/tmux-themepack ~/tmux/.tmux-themepack
+fi
+
+tmux source ~/.tmux.conf
+
