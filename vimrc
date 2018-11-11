@@ -11,6 +11,7 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 set ai
+set noswapfile
 set clipboard=unnamedplus
 set encoding=utf-8
 
