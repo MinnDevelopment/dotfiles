@@ -29,5 +29,3 @@ fi
 
 set +xe
 source ~/.zshrc
-
-
