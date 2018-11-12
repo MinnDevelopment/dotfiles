@@ -1,0 +1,11 @@
+#!/bin/sh
+
+./setup-vim
+
+set +xe
+
+# auto-completion tool
+if [ ! -d $bundle/YouCompleteMe ]; then
+    git clone --recurse-submodules $gh/valloric/YouCompleteMe $bundle/YouCompleteMe
+    python3 $bundle/YouCompleteMe/install.py --clang-completer --java-completer
+fi
