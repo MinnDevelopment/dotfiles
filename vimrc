@@ -2,7 +2,8 @@
 " vim: set foldlevel=0
 " }}}
 
-execute pathogen#infect()
+call pathogen#infect()
+call pathogen#helptags()
 
 " Options {{{
 set nocompatible
@@ -63,9 +64,9 @@ au FileType cc,cpp,c,h,hpp,hh inoremap <silent> <C-K> <Esc>:call<Space>ClangForm
 " au FileType c inoremap int<Space>main( int<Space>main(void)<Space>{<CR><Tab><CR>return<Space>0;<CR>}<Esc>4XkkA
 
 " auto complete blocks
-imap { {}<Esc>i
-imap ( ()<Esc>i
-imap [ []<Esc>i
+" imap { {}<Esc>i
+" imap ( ()<Esc>i
+" imap [ []<Esc>i
 " imap < <><Esc>i
 
 " }}}

@@ -15,14 +15,6 @@ fi
 if [ ! -f ~/.gitignore_global ]; then
     ln -s $wd/gitignore_global ~/.gitignore_global
 fi
-if [ ! -f ~/.vim/syntax/kt.vim ]; then
-    mkdir -p ~/.vim/syntax
-    ln -s $wd/vim/syntax/kt.vim ~/.vim/syntax/kt.vim
-fi
-if [ ! -f ~/.vim/ftdetect/kt.vim ]; then
-    mkdir -p ~/.vim/ftdetect
-    ln -s $wd/vim/ftdetect/kt.vim ~/.vim/ftdetect/kt.vim
-fi
 if [ ! -d ~/.oh-my-zsh ]; then
     git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
 fi
