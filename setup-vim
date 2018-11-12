@@ -13,12 +13,24 @@ fi
 bundle=~/.vim/bundle
 gh=https://github.com
 
+# show current directory on side
 if [ ! -d $bundle/nerdtree  ]; then
     git clone $gh/scrooloose/nerdtree.git $bundle/nerdtree
 fi
+# kotlin syntax highlighting
 if [ ! -d $bundle/kotlin-vim ]; then
     git clone $gh/udalov/kotlin-vim $bundle/kotlin-vim
 fi
+# auto-complete for braces etc
 if [ ! -d $bundle/delimitMate ]; then
     git clone $gh/Raimondi/delimitMate $bundle/delimitMate
+fi
+# git awareness
+if [ ! -d $bundle/vim-gitgutter ]; then
+    git clone $gh/airblade/vim-gitgutter $bundle/vim-gitgutter
+fi
+# auto-completion tool
+if [ ! -d $bundle/YouCompleteMe ]; then
+    git clone --recurse-submodules $gh/valloric/YouCompleteMe $bundle/YouCompleteMe
+    python3 $bundle/YouCompleteMe/install.py --clang-completer --java-completer
 fi
