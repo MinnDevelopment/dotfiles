@@ -5,6 +5,10 @@
 call pathogen#infect()
 call pathogen#helptags()
 
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
+
 " Options {{{
 set nocompatible
 set nu
@@ -27,7 +31,7 @@ set wildmenu
 set mouse=a
 
 set laststatus=2
-set statusline=%!MyStatusLine()
+" set statusline=%!MyStatusLine()
 
 autocmd VimEnter * NERDTree
 
@@ -55,6 +59,9 @@ nmap <C-S> :wa<CR>
 " close on X
 " imap <C-X> <Esc>:x<CR>
 nmap <C-X> :xa<CR>
+
+" Auto-make
+nmap <C-M> :!make<CR>
 
 " auto format code
 au FileType cc,cpp,c,h,hpp,hh nmap <silent> <C-K> :call<Space>ClangFormat()<CR>
