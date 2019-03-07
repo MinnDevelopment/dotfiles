@@ -36,6 +36,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # alias
 alias ls="ls -A --color=auto"
 alias ll="ls -laFh"
+alias c="clear"
 
 # special configs
 source ~/.bindkeyrc
