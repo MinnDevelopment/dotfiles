@@ -32,7 +32,9 @@ set mouse=a
 
 set laststatus=2
 " set statusline=%!MyStatusLine()
-let g:airline_theme='wombat'
+
+let g:airline_theme='violet'
+let airline_powerline_fonts=1
 
 autocmd VimEnter * NERDTree
 
