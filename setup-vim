@@ -10,7 +10,7 @@ if [ ! -f ~/.vim/autoload/pathogen.vim  ]; then
     wget -O ~/.vim/autoload/pathogen.vim 'https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim'
 fi
 
-pip install powerline-status
+# pip install powerline-status
 
 bundle=~/.vim/bundle
 gh=https://github.com
@@ -30,4 +30,11 @@ fi
 # git awareness
 if [ ! -d $bundle/vim-gitgutter ]; then
     git clone $gh/airblade/vim-gitgutter $bundle/vim-gitgutter
+fi
+# powerline
+if [ ! -d $bundle/vim-airline ]; then
+    git clone $gh/vim-airline/vim-airline $bundle/vim-airline
+fi
+if [ ! -d $bundle/vim-airline-themes ]; then
+    git clone $gh/vim-airline/vim-airline-themes $bundle/vim-airline-themes
 fi
