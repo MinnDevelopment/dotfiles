@@ -36,8 +36,6 @@ set laststatus=2
 let g:airline_theme='violet'
 let airline_powerline_fonts=1
 
-autocmd VimEnter * NERDTree
-
 filetype plugin indent on
 syntax on
 " }}}

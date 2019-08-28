@@ -16,9 +16,9 @@ bundle=~/.vim/bundle
 gh=https://github.com
 
 # show current directory on side
-if [ ! -d $bundle/nerdtree  ]; then
-    git clone $gh/scrooloose/nerdtree.git $bundle/nerdtree
-fi
+#if [ ! -d $bundle/nerdtree  ]; then
+#    git clone $gh/scrooloose/nerdtree.git $bundle/nerdtree
+#fi
 # kotlin syntax highlighting
 if [ ! -d $bundle/kotlin-vim ]; then
     git clone $gh/udalov/kotlin-vim $bundle/kotlin-vim
