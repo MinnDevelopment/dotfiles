@@ -12,8 +12,6 @@ export UPDATE_ZSH_DAYS=14
 
 plugins=(
   git
-  gradle-completion
-  zsh-url-highlighter
   zsh-syntax-highlighting
   zsh-autosuggestions
 )
