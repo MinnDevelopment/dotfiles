@@ -9,23 +9,35 @@ plugins=$zsh/plugins
 
 if [ ! -d $plugins/zsh-autosuggestions ]; then
     git clone -q https://github.com/zsh-users/zsh-autosuggestions $plugins/zsh-autosuggestions
+else
+    pushd $plugins/zsh-autosuggestions
+    git pull
+    popd
 fi
 
 if [ ! -d $plugins/zsh-syntax-highlighting ]; then
     git clone -q https://github.com/zsh-users/zsh-syntax-highlighting $plugins/zsh-syntax-highlighting
-fi
-
-if [ ! -d $plugins/zsh-url-highlighter ]; then
-    git clone -q https://github.com/ascii-soup/zsh-url-highlighter $plugins/zsh-url-highlighter
+else
+    pushd $plugins/zsh-syntax-highlighting
+    git pull
+    popd
 fi
 
 if [ ! -d $plugins/gradle-completion ]; then
     git clone -q https://github.com/gradle/gradle-completion $plugins/gradle-completion
+else
+    pushd $plugins/gradle-completion
+    git pull
+    popd
 fi
 
 if [ ! -f $zsh/themes/bullet-train.zsh-theme ]; then
     wget -O $zsh/themes/bullet-train.zsh-theme https://raw.github.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
 fi
+
+# Fonts used for zsh theme
+sudo apt install -y fonts-powerline
+fc-cache -fr
 
 set +xe
 source ~/.zshrc
