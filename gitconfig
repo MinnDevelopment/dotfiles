@@ -8,6 +8,8 @@
     dt = difftool
 [commit]
     gpgSign = true
+[tag]
+    gpgSign = true
 [core]
     editor = vim
     pager = less -R
