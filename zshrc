@@ -35,6 +35,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 alias ls="ls -A --color=auto"
 alias ll="ls -laFh"
 alias c="clear"
+alias git-merge-prune="git branch -vv | grep ': gone]' | awk '{print \$1}' | xargs -p git branch -D"
 
 # special configs
 source ~/.bindkeyrc
